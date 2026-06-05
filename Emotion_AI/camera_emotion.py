@@ -37,32 +37,35 @@ while True:
         scaleFactor=1.3,
         minNeighbors=5
     )
-
+    print("Faces found:", len(faces))
+    
     for (x, y, w, h) in faces:
 
         face = gray[y:y+h, x:x+w]
-
         face = cv2.resize(face, (48, 48))
 
         face = face.astype("float32") / 255.0
-
         face = np.expand_dims(face, axis=0)
         face = np.expand_dims(face, axis=-1)
 
         prediction = model.predict(face, verbose=0)[0]
 
-    for emotion, prob in zip(emotion_labels, prediction):
-        print(f"{emotion}: {prob:.3f}")
+        for emotion, prob in zip(emotion_labels, prediction):
+            print(f"{emotion}: {prob:.3f}")
 
         emotion = emotion_labels[np.argmax(prediction)]
-        cv2.rectangle(
-            frame,
-            (x, y),
-            (x+w, y+h),
-            (0, 255, 0),
-            2
-        )
 
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (0,255,0), 2)
+
+        cv2.putText(
+        frame,
+        emotion,
+        (x, y-10),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.9,
+        (0,255,0),
+        2
+    )
         cv2.putText(
             frame,
             emotion,
@@ -79,4 +82,4 @@ while True:
         break
 
 cap.release()
-cv2.destroyAllWindows()
+cv2.destroyAllWindows()   
