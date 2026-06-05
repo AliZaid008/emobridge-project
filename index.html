@@ -3,41 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmoBridge - Affective Computing for ASD</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        h1 { color: #2c3e50; margin-bottom: 10px; }
-        p { font-size: 1.1em; line-height: 1.6; color: #7f8c8d; }
-        .badge {
-            background-color: #3498db;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            display: inline-block;
-            margin-top: 20px;
-        }
-    </style>
+    <title>EmoBridge - Affective Computing for Autism</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>EmoBridge Project</h1>
-        <p>An interactive social robot designed as a smart assistant for children with Autism Spectrum Disorder (ASD), utilizing Affective Computing to bridge emotional and social gaps.</p>
-        <div class="badge">Website Under Construction</div>
-    </div>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Emo<span>Bridge</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#dashboard">Parent Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Bridging Emotions Through Technology</h2>
+            <p>An interactive social robot leveraging affective computing to support emotional expression and gamified learning for children with Autism.</p>
+            <a href="#dashboard" class="btn">View Demo Dashboard</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About EmoBridge</h2>
+            <div class="about-grid">
+                <div class="card">
+                    <h3>🧠 Affective Computing</h3>
+                    <p>Real-time facial expression and emotion detection optimized for a lightweight Raspberry Pi system.</p>
+                </div>
+                <div class="card">
+                    <h3>🎮 Gamified Learning</h3>
+                    <p>Interactive emoji-matching and facial mimicry games to encourage social-emotional development.</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Progress Tracking</h3>
+                    <p>Secured data storage providing parents with continuous analytics on engagement and emotional trends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h2>Parent Analytics Dashboard (Demo)</h2>
+            <p class="subtitle">Real-time data synced from the EmoBridge Robot</p>
+            
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <h4>Registered Children</h4>
+                    <p class="number">1</p>
+                </div>
+                <div class="metric-box">
+                    <h4>Total AI Sessions</h4>
+                    <p class="number">12</p>
+                </div>
+                <div class="metric-box">
+                    <h4>Badges Earned</h4>
+                    <p class="number">5</p>
+                </div>
+                <div class="metric-box">
+                    <h4>Average Game Score</h4>
+                    <p class="number">88%</p>
+                </div>
+            </div>
+
+            <div class="chart-mock">
+                <h3>Dominant Emotion This Week: <span class="emotion-highlight">Happy</span></h3>
+                <p>Engagement Rate: 85% | Distraction Count: 2 (Average per session)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EmoBridge Project. Built for Social Good.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
